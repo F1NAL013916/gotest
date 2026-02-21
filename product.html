@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Wireless Bluetooth Headphones — AliExpress Product</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/extra.css">
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+  <div class="container">
+    <div><a href="account.html">My Account</a> | <a href="account.html">My Orders</a> | <a href="#">Message Center</a> | <a href="#">Help</a></div>
+    <div><a href="#">🌐 EN / USD</a> | <a href="#">App</a> | <a href="#">Buyer Protection</a></div>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="container">
+    <a href="index.html" class="header__logo">Ali<span>Express</span></a>
+    <div class="header__search">
+      <input type="text" placeholder="Search for products, brands and more...">
+      <button type="button">Search</button>
+    </div>
+    <nav class="header__actions">
+      <a href="account.html">👤 Account</a>
+      <a href="account.html">❤️ Wishlist</a>
+      <a href="cart.html">🛒 Cart <span class="cart-count" id="cartCount">3</span></a>
+    </nav>
+  </div>
+</header>
+
+<!-- CATEGORY NAV -->
+<nav class="cat-nav">
+  <div class="container">
+    <div class="cat-nav__all"><span class="icon-menu">☰</span> All Categories</div>
+    <div class="cat-nav__list">
+      <a href="category.html">Flash Deals</a>
+      <a href="category.html">Top Brands</a>
+      <a href="category.html">New Arrivals</a>
+      <a href="category.html">Choice</a>
+      <a href="category.html">Electronics</a>
+      <a href="category.html">Fashion</a>
+      <a href="category.html">Home &amp; Garden</a>
+    </div>
+  </div>
+</nav>
+
+<!-- BREADCRUMB -->
+<div class="container">
+  <div class="breadcrumb">
+    <a href="index.html">Home</a> <span>›</span>
+    <a href="category.html">Consumer Electronics</a> <span>›</span>
+    <a href="category.html">Headphones</a> <span>›</span>
+    <strong>Wireless Bluetooth Headphones</strong>
+  </div>
+</div>
+
+<!-- PRODUCT DETAIL -->
+<div class="container">
+  <div class="product-detail">
+    <div class="pd-top">
+      <!-- Gallery -->
+      <div class="pd-gallery">
+        <div class="pd-gallery__main" id="pdMainImg">🎧</div>
+        <div class="pd-gallery__thumbs">
+          <div class="pd-gallery__thumb active" onclick="changeMainImg(this,'🎧')">🎧</div>
+          <div class="pd-gallery__thumb" onclick="changeMainImg(this,'📦')">📦</div>
+          <div class="pd-gallery__thumb" onclick="changeMainImg(this,'🔌')">🔌</div>
+          <div class="pd-gallery__thumb" onclick="changeMainImg(this,'👂')">👂</div>
+          <div class="pd-gallery__thumb" onclick="changeMainImg(this,'🎵')">🎵</div>
+        </div>
+      </div>
+
+      <!-- Info -->
+      <div class="pd-info">
+        <h1>2026 Original Wireless Bluetooth 5.3 Headphones Active Noise Cancelling HiFi Stereo Bass Foldable Gaming Headset with Microphone</h1>
+
+        <div class="pd-info__price-box">
+          <span class="pd-info__price">$24.99</span>
+          <span class="pd-info__original">$89.99</span>
+          <span class="pd-info__discount-tag">-72%</span>
+          <div style="font-size:12px;color:#888;margin-top:6px">2,847 sold · ⭐ 4.8 (1,243 reviews)</div>
+        </div>
+
+        <div class="pd-info__shipping">
+          <strong>Free Shipping</strong> Estimated delivery: 12–20 business days
+        </div>
+
+        <div class="pd-guarantees">
+          <div class="pd-guarantee"><span class="icon">✓</span> Buyer Protection</div>
+          <div class="pd-guarantee"><span class="icon">✓</span> 90-Day Returns</div>
+          <div class="pd-guarantee"><span class="icon">✓</span> Secure Payment</div>
+        </div>
+
+        <div class="pd-options">
+          <div class="pd-options__label">Color:</div>
+          <div class="pd-options__list">
+            <div class="pd-option selected" onclick="selectOption(this)">Black</div>
+            <div class="pd-option" onclick="selectOption(this)">White</div>
+            <div class="pd-option" onclick="selectOption(this)">Blue</div>
+            <div class="pd-option" onclick="selectOption(this)">Red</div>
+            <div class="pd-option" onclick="selectOption(this)">Green</div>
+          </div>
+
+          <div class="pd-options__label">Bundle:</div>
+          <div class="pd-options__list">
+            <div class="pd-option selected" onclick="selectOption(this)">Headphones Only</div>
+            <div class="pd-option" onclick="selectOption(this)">+ Carry Case ($4.99)</div>
+            <div class="pd-option" onclick="selectOption(this)">+ Extra Pads ($2.99)</div>
+            <div class="pd-option" onclick="selectOption(this)">Full Set ($6.99)</div>
+          </div>
+        </div>
+
+        <div class="pd-options__label">Quantity:</div>
+        <div class="pd-quantity">
+          <button onclick="changeQty(-1)">−</button>
+          <input type="number" value="1" min="1" max="99" id="pdQty">
+          <button onclick="changeQty(1)">+</button>
+          <span style="margin-left:12px;font-size:13px;color:#999">1,842 pieces available</span>
+        </div>
+
+        <div class="pd-actions">
+          <button class="btn btn--primary" onclick="showToast('Added to cart!','success')">Add to Cart</button>
+          <button class="btn btn--secondary">Buy Now</button>
+          <button class="btn btn--outline pd-wishlist" onclick="this.classList.toggle('active')">❤️ Wishlist</button>
+        </div>
+
+        <!-- Store Info -->
+        <div class="pd-store">
+          <div class="pd-store__avatar">S</div>
+          <div class="pd-store__info">
+            <div class="pd-store__name">SoundTech Official Store</div>
+            <div class="pd-store__meta">98.2% Positive Feedback · 5,430 Followers · 2 Years</div>
+          </div>
+          <div class="pd-store__actions">
+            <button class="btn btn--outline" style="padding:8px 16px;font-size:12px">Visit Store</button>
+            <button class="btn btn--outline" style="padding:8px 16px;font-size:12px">Follow</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tabs -->
+    <div class="pd-tabs">
+      <div class="pd-tabs__nav">
+        <button class="active" onclick="switchTab(event,'tabDesc')">Description</button>
+        <button onclick="switchTab(event,'tabSpecs')">Specifications</button>
+        <button onclick="switchTab(event,'tabReviews')">Reviews (1,243)</button>
+        <button onclick="switchTab(event,'tabShipping')">Shipping &amp; Returns</button>
+      </div>
+      <div class="pd-tabs__content">
+
+        <!-- Description -->
+        <div class="pd-tabs__panel active" id="tabDesc">
+          <div class="pd-description">
+            <h3>Premium Wireless Audio Experience</h3>
+            <p>Immerse yourself in crystal-clear audio with our 2026 Wireless Bluetooth 5.3 Headphones. Featuring advanced Active Noise Cancelling (ANC) technology, these headphones block out ambient noise so you can focus on your music, podcasts, or calls.</p>
+            <ul>
+              <li>Bluetooth 5.3 for stable, low-latency connection</li>
+              <li>40mm dynamic drivers for deep bass and clear treble</li>
+              <li>Active Noise Cancellation with transparency mode</li>
+              <li>Up to 60 hours of playtime on a single charge</li>
+              <li>Foldable design for easy portability</li>
+              <li>Built-in microphone for hands-free calls</li>
+              <li>Soft memory foam ear cushions for all-day comfort</li>
+            </ul>
+            <h3>What's in the Box</h3>
+            <p>1x Wireless Headphones, 1x USB-C Charging Cable, 1x 3.5mm Audio Cable, 1x User Manual</p>
+            <div class="pd-desc-images">
+              <div class="pd-desc-img">🎧 Product Image 1</div>
+              <div class="pd-desc-img">📐 Size Details</div>
+              <div class="pd-desc-img">🔋 Battery Life Chart</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Specs -->
+        <div class="pd-tabs__panel" id="tabSpecs">
+          <div class="pd-specs">
+            <table>
+              <tr><td>Brand</td><td>SoundTech</td></tr>
+              <tr><td>Model</td><td>ST-ANC600</td></tr>
+              <tr><td>Bluetooth Version</td><td>5.3</td></tr>
+              <tr><td>Driver Size</td><td>40mm</td></tr>
+              <tr><td>Frequency Response</td><td>20Hz – 20kHz</td></tr>
+              <tr><td>Impedance</td><td>32Ω</td></tr>
+              <tr><td>Battery Capacity</td><td>800mAh</td></tr>
+              <tr><td>Playtime</td><td>Up to 60 hours (ANC off) / 40 hours (ANC on)</td></tr>
+              <tr><td>Charging Time</td><td>2 hours</td></tr>
+              <tr><td>Charging Port</td><td>USB-C</td></tr>
+              <tr><td>Weight</td><td>260g</td></tr>
+              <tr><td>Foldable</td><td>Yes</td></tr>
+              <tr><td>Noise Cancellation</td><td>Active (ANC) + Transparency Mode</td></tr>
+              <tr><td>Microphone</td><td>Built-in with CVC 8.0</td></tr>
+              <tr><td>Compatibility</td><td>iOS, Android, Windows, macOS</td></tr>
+            </table>
+          </div>
+        </div>
+
+        <!-- Reviews -->
+        <div class="pd-tabs__panel" id="tabReviews">
+          <div class="pd-reviews__summary">
+            <div>
+              <div class="pd-reviews__avg">4.8</div>
+              <div class="pd-reviews__stars">★★★★★</div>
+            </div>
+            <div style="font-size:13px;color:#555">
+              <div>⭐⭐⭐⭐⭐ — 892 (72%)</div>
+              <div>⭐⭐⭐⭐ — 248 (20%)</div>
+              <div>⭐⭐⭐ — 68 (5%)</div>
+              <div>⭐⭐ — 23 (2%)</div>
+              <div>⭐ — 12 (1%)</div>
+            </div>
+          </div>
+
+          <div class="review-item">
+            <div class="review-item__header">
+              <div class="review-item__avatar">J</div>
+              <div><div class="review-item__name">John D.</div><div class="review-item__date">Jan 15, 2026</div></div>
+              <div class="review-item__rating">★★★★★</div>
+            </div>
+            <div class="review-item__text">Amazing headphones for the price! The noise cancellation is surprisingly effective and the bass is deep and punchy. Battery life is incredible — I've been using them for a week and still haven't needed to charge. Highly recommend!</div>
+          </div>
+
+          <div class="review-item">
+            <div class="review-item__header">
+              <div class="review-item__avatar">M</div>
+              <div><div class="review-item__name">Maria S.</div><div class="review-item__date">Jan 10, 2026</div></div>
+              <div class="review-item__rating">★★★★☆</div>
+            </div>
+            <div class="review-item__text">Very comfortable and sound quality is great. The Bluetooth connection is stable even from another room. Only giving 4 stars because the ear cushions could be a bit softer for extended use. Overall great value.</div>
+          </div>
+
+          <div class="review-item">
+            <div class="review-item__header">
+              <div class="review-item__avatar">A</div>
+              <div><div class="review-item__name">Alex K.</div><div class="review-item__date">Dec 28, 2025</div></div>
+              <div class="review-item__rating">★★★★★</div>
+            </div>
+            <div class="review-item__text">Best budget ANC headphones I've tried. The build quality is solid, foldable design is convenient for travel. Sound quality punches way above its price range. USB-C charging is a nice plus.</div>
+          </div>
+
+          <div class="review-item">
+            <div class="review-item__header">
+              <div class="review-item__avatar">S</div>
+              <div><div class="review-item__name">Sophie L.</div><div class="review-item__date">Dec 20, 2025</div></div>
+              <div class="review-item__rating">★★★★★</div>
+            </div>
+            <div class="review-item__text">Bought these as a gift and ended up buying a pair for myself too! The ANC works really well on flights and the transparency mode is perfect for when you need to hear announcements. Love the design!</div>
+          </div>
+
+          <div class="review-item">
+            <div class="review-item__header">
+              <div class="review-item__avatar">R</div>
+              <div><div class="review-item__name">Roberto C.</div><div class="review-item__date">Dec 15, 2025</div></div>
+              <div class="review-item__rating">★★★★☆</div>
+            </div>
+            <div class="review-item__text">Good headphones overall. Sound is clear and balanced, ANC does a decent job. The microphone quality for calls could be better in windy conditions. Battery life is as advertised. Would buy again.</div>
+          </div>
+        </div>
+
+        <!-- Shipping -->
+        <div class="pd-tabs__panel" id="tabShipping">
+          <div class="pd-description">
+            <h3>Shipping Information</h3>
+            <p><strong>Free Standard Shipping:</strong> 12–20 business days</p>
+            <p><strong>Express Shipping:</strong> 7–12 business days (+$4.99)</p>
+            <p><strong>Premium Shipping:</strong> 3–7 business days (+$9.99)</p>
+            <h3>Return Policy</h3>
+            <p>We offer a 90-day return policy. If you're not satisfied with your purchase, you can return the item for a full refund within 90 days of delivery. The item must be in its original condition and packaging.</p>
+            <h3>Buyer Protection</h3>
+            <ul>
+              <li>Full refund if item not received within delivery window</li>
+              <li>Full or partial refund if item is not as described</li>
+              <li>Free return shipping on qualifying orders</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Related Products -->
+  <div class="related-products">
+    <div class="section-title"><h2>Related Products</h2><a href="category.html">View All →</a></div>
+    <div class="product-grid" id="relatedGrid"></div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__col"><h4>Customer Service</h4><a href="#">Help Center</a><a href="#">Transaction Services</a><a href="#">Account Assistance</a></div>
+      <div class="footer__col"><h4>Shopping With Us</h4><a href="#">Making Payments</a><a href="#">Delivery Options</a><a href="#">Return Policy</a></div>
+      <div class="footer__col"><h4>Collaborate</h4><a href="#">Partnerships</a><a href="#">Affiliate Program</a><a href="#">Seller Portal</a></div>
+      <div class="footer__col"><h4>Pay With</h4><a href="#">Visa / MasterCard</a><a href="#">PayPal</a><a href="#">Apple Pay</a></div>
+      <div class="footer__col"><h4>Stay Connected</h4><a href="#">📘 Facebook</a><a href="#">🐦 Twitter</a><a href="#">📷 Instagram</a></div>
+    </div>
+    <div class="footer__bottom"><p>© 2026 AliExpress.com. All rights reserved.</p></div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+<div class="toast" id="toast"></div>
+
+<script src="js/main.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+  var g=document.getElementById('relatedGrid');
+  if(g){var h='';for(var i=0;i<12;i++)h+=buildProductCard(i);g.innerHTML=h;}
+});
+function changeMainImg(el,emoji){
+  document.querySelectorAll('.pd-gallery__thumb').forEach(function(t){t.classList.remove('active')});
+  el.classList.add('active');
+  document.getElementById('pdMainImg').textContent=emoji;
+}
+function selectOption(el){
+  el.parentElement.querySelectorAll('.pd-option').forEach(function(o){o.classList.remove('selected')});
+  el.classList.add('selected');
+}
+function changeQty(d){
+  var inp=document.getElementById('pdQty');
+  var v=parseInt(inp.value)||1;
+  v+=d;if(v<1)v=1;if(v>99)v=99;
+  inp.value=v;
+}
+function switchTab(e,id){
+  document.querySelectorAll('.pd-tabs__nav button').forEach(function(b){b.classList.remove('active')});
+  document.querySelectorAll('.pd-tabs__panel').forEach(function(p){p.classList.remove('active')});
+  e.target.classList.add('active');
+  document.getElementById(id).classList.add('active');
+}
+</script>
+</body>
+</html>
