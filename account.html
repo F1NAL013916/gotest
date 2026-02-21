@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>My Account — AliExpress</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/extra.css">
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+  <div class="container">
+    <div><a href="account.html">My Account</a> | <a href="account.html">My Orders</a> | <a href="#">Message Center</a> | <a href="#">Help</a></div>
+    <div><a href="#">🌐 EN / USD</a> | <a href="#">App</a> | <a href="#">Buyer Protection</a></div>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="container">
+    <a href="index.html" class="header__logo">Ali<span>Express</span></a>
+    <div class="header__search">
+      <input type="text" placeholder="Search for products, brands and more...">
+      <button type="button">Search</button>
+    </div>
+    <nav class="header__actions">
+      <a href="account.html">👤 Account</a>
+      <a href="account.html">❤️ Wishlist</a>
+      <a href="cart.html">🛒 Cart <span class="cart-count" id="cartCount">3</span></a>
+    </nav>
+  </div>
+</header>
+
+<!-- BREADCRUMB -->
+<div class="container">
+  <div class="breadcrumb">
+    <a href="index.html">Home</a> <span>›</span>
+    <strong>My Account</strong>
+  </div>
+</div>
+
+<!-- ACCOUNT PAGE -->
+<div class="container account-page">
+  <div class="account-layout">
+
+    <!-- Sidebar -->
+    <aside class="account-sidebar">
+      <div class="account-sidebar__user">
+        <div class="account-sidebar__avatar">U</div>
+        <div class="account-sidebar__name">User123</div>
+        <div style="font-size:12px;color:#999;margin-top:4px">Member since 2024</div>
+      </div>
+      <nav class="account-sidebar__nav">
+        <a href="#" class="active" onclick="switchAccountTab(event,'tabOrders')">📦 My Orders</a>
+        <a href="#" onclick="switchAccountTab(event,'tabWishlist')">❤️ Wishlist</a>
+        <a href="#" onclick="switchAccountTab(event,'tabCoupons')">🎟️ My Coupons</a>
+        <a href="#" onclick="switchAccountTab(event,'tabAddress')">📍 Addresses</a>
+        <a href="#" onclick="switchAccountTab(event,'tabPayment')">💳 Payment Methods</a>
+        <a href="#" onclick="switchAccountTab(event,'tabSettings')">⚙️ Settings</a>
+        <a href="#" onclick="switchAccountTab(event,'tabMessages')">💬 Messages</a>
+        <a href="#" onclick="switchAccountTab(event,'tabDisputes')">🔄 Disputes &amp; Returns</a>
+      </nav>
+    </aside>
+
+    <!-- Content -->
+    <div class="account-content">
+
+      <!-- Stats -->
+      <div class="account-stats">
+        <div class="stat-card"><div class="stat-card__number">12</div><div class="stat-card__label">Total Orders</div></div>
+        <div class="stat-card"><div class="stat-card__number">3</div><div class="stat-card__label">In Transit</div></div>
+        <div class="stat-card"><div class="stat-card__number">24</div><div class="stat-card__label">Wishlist Items</div></div>
+        <div class="stat-card"><div class="stat-card__number">5</div><div class="stat-card__label">Coupons</div></div>
+      </div>
+
+      <!-- Orders Tab -->
+      <div id="tabOrders" class="account-tab active">
+        <h2>My Orders</h2>
+
+        <div class="order-card">
+          <div class="order-card__header">
+            <div class="order-card__id">Order #AE2026021234 · Feb 10, 2026</div>
+            <div class="order-card__status order-card__status--shipped">🚚 In Transit</div>
+          </div>
+          <div class="order-card__items">
+            <div class="order-card__item-img">🎧</div>
+            <div class="order-card__item-img">⌚</div>
+          </div>
+          <div class="order-card__footer">
+            <div class="order-card__total">Total: $43.48</div>
+            <div style="display:flex;gap:8px">
+              <button class="btn btn--outline" style="padding:6px 16px;font-size:12px">Track Order</button>
+              <button class="btn btn--outline" style="padding:6px 16px;font-size:12px">View Details</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="order-card">
+          <div class="order-card__header">
+            <div class="order-card__id">Order #AE2026010987 · Jan 25, 2026</div>
+            <div class="order-card__status order-card__status--delivered">✅ Delivered</div>
+          </div>
+          <div class="order-card__items">
+            <div class="order-card__item-img">📱</div>
+            <div class="order-card__item-img">🔌</div>
+            <div class="order-card__item-img">🖱️</div>
+          </div>
+          <div class="order-card__footer">
+            <div class="order-card__total">Total: $156.97</div>
+            <div style="display:flex;gap:8px">
+              <button class="btn btn--primary" style="padding:6px 16px;font-size:12px">Leave Review</button>
+              <button class="btn btn--outline" style="padding:6px 16px;font-size:12px">Buy Again</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="order-card">
+          <div class="order-card__header">
+            <div class="order-card__id">Order #AE2025120654 · Dec 15, 2025</div>
+            <div class="order-card__status order-card__status--delivered">✅ Delivered</div>
+          </div>
+          <div class="order-card__items">
+            <div class="order-card__item-img">💻</div>
+          </div>
+          <div class="order-card__footer">
+            <div class="order-card__total">Total: $289.99</div>
+            <div style="display:flex;gap:8px">
+              <button class="btn btn--primary" style="padding:6px 16px;font-size:12px">Leave Review</button>
+              <button class="btn btn--outline" style="padding:6px 16px;font-size:12px">Buy Again</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="order-card">
+          <div class="order-card__header">
+            <div class="order-card__id">Order #AE2025111234 · Nov 28, 2025</div>
+            <div class="order-card__status order-card__status--pending">⏳ Processing</div>
+          </div>
+          <div class="order-card__items">
+            <div class="order-card__item-img">👟</div>
+            <div class="order-card__item-img">👔</div>
+          </div>
+          <div class="order-card__footer">
+            <div class="order-card__total">Total: $67.48</div>
+            <div style="display:flex;gap:8px">
+              <button class="btn btn--outline" style="padding:6px 16px;font-size:12px">Cancel Order</button>
+              <button class="btn btn--outline" style="padding:6px 16px;font-size:12px">Contact Seller</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="pagination" style="margin-top:20px">
+          <button>‹</button>
+          <a class="active" href="#">1</a>
+          <a href="#">2</a>
+          <a href="#">3</a>
+          <button>›</button>
+        </div>
+      </div>
+
+      <!-- Wishlist Tab -->
+      <div id="tabWishlist" class="account-tab" style="display:none">
+        <h2>My Wishlist</h2>
+        <div class="product-grid" id="wishlistGrid"></div>
+      </div>
+
+      <!-- Coupons Tab -->
+      <div id="tabCoupons" class="account-tab" style="display:none">
+        <h2>My Coupons</h2>
+        <div class="coupon-card">
+          <div class="coupon-card__amount">$5<div style="font-size:11px;font-weight:400">OFF</div></div>
+          <div class="coupon-card__info">
+            <div class="coupon-card__title">$5 off orders over $30</div>
+            <div class="coupon-card__expire">Valid until Mar 31, 2026</div>
+          </div>
+          <button class="coupon-card__use">Use Now</button>
+        </div>
+        <div class="coupon-card">
+          <div class="coupon-card__amount">$10<div style="font-size:11px;font-weight:400">OFF</div></div>
+          <div class="coupon-card__info">
+            <div class="coupon-card__title">$10 off orders over $60</div>
+            <div class="coupon-card__expire">Valid until Apr 15, 2026</div>
+          </div>
+          <button class="coupon-card__use">Use Now</button>
+        </div>
+        <div class="coupon-card">
+          <div class="coupon-card__amount">15%<div style="font-size:11px;font-weight:400">OFF</div></div>
+          <div class="coupon-card__info">
+            <div class="coupon-card__title">15% off Electronics category</div>
+            <div class="coupon-card__expire">Valid until Feb 28, 2026</div>
+          </div>
+          <button class="coupon-card__use">Use Now</button>
+        </div>
+        <div class="coupon-card">
+          <div class="coupon-card__amount">$3<div style="font-size:11px;font-weight:400">OFF</div></div>
+          <div class="coupon-card__info">
+            <div class="coupon-card__title">$3 off any order (new user)</div>
+            <div class="coupon-card__expire">Valid until May 1, 2026</div>
+          </div>
+          <button class="coupon-card__use">Use Now</button>
+        </div>
+        <div class="coupon-card">
+          <div class="coupon-card__amount">$20<div style="font-size:11px;font-weight:400">OFF</div></div>
+          <div class="coupon-card__info">
+            <div class="coupon-card__title">$20 off orders over $100</div>
+            <div class="coupon-card__expire">Valid until Jun 30, 2026</div>
+          </div>
+          <button class="coupon-card__use">Use Now</button>
+        </div>
+      </div>
+
+      <!-- Addresses Tab -->
+      <div id="tabAddress" class="account-tab" style="display:none">
+        <h2>My Addresses</h2>
+        <div class="address-card">
+          <div class="address-card__name">John Doe (Default)</div>
+          <div class="address-card__detail">123 Main Street, Apt 4B<br>New York, NY 10001<br>United States<br>+1 (555) 123-4567</div>
+          <div class="address-card__actions"><button>Edit</button><button>Delete</button></div>
+        </div>
+        <div class="address-card">
+          <div class="address-card__name">John Doe (Office)</div>
+          <div class="address-card__detail">456 Business Ave, Floor 12<br>New York, NY 10018<br>United States<br>+1 (555) 987-6543</div>
+          <div class="address-card__actions"><button>Edit</button><button>Delete</button><button>Set as Default</button></div>
+        </div>
+        <button class="btn btn--primary" style="margin-top:16px">+ Add New Address</button>
+      </div>
+
+      <!-- Payment Tab -->
+      <div id="tabPayment" class="account-tab" style="display:none">
+        <h2>Payment Methods</h2>
+        <div class="address-card">
+          <div class="address-card__name">💳 Visa ending in 4242</div>
+          <div class="address-card__detail">Expires 08/2027 · Default payment method</div>
+          <div class="address-card__actions"><button>Edit</button><button>Remove</button></div>
+        </div>
+        <div class="address-card">
+          <div class="address-card__name">💳 MasterCard ending in 8888</div>
+          <div class="address-card__detail">Expires 12/2026</div>
+          <div class="address-card__actions"><button>Edit</button><button>Remove</button><button>Set as Default</button></div>
+        </div>
+        <div class="address-card">
+          <div class="address-card__name">📱 PayPal — user@email.com</div>
+          <div class="address-card__detail">Connected</div>
+          <div class="address-card__actions"><button>Disconnect</button></div>
+        </div>
+        <button class="btn btn--primary" style="margin-top:16px">+ Add Payment Method</button>
+      </div>
+
+      <!-- Settings Tab -->
+      <div id="tabSettings" class="account-tab" style="display:none">
+        <h2>Account Settings</h2>
+        <div style="max-width:500px">
+          <div style="margin-bottom:16px">
+            <label style="display:block;font-size:13px;font-weight:600;margin-bottom:4px;color:#555">Username</label>
+            <input type="text" value="User123" style="width:100%;border:1px solid #ddd;border-radius:6px;padding:10px 14px;font-size:14px">
+          </div>
+          <div style="margin-bottom:16px">
+            <label style="display:block;font-size:13px;font-weight:600;margin-bottom:4px;color:#555">Email</label>
+            <input type="email" value="user123@email.com" style="width:100%;border:1px solid #ddd;border-radius:6px;padding:10px 14px;font-size:14px">
+          </div>
+          <div style="margin-bottom:16px">
+            <label style="display:block;font-size:13px;font-weight:600;margin-bottom:4px;color:#555">Phone</label>
+            <input type="tel" value="+1 (555) 123-4567" style="width:100%;border:1px solid #ddd;border-radius:6px;padding:10px 14px;font-size:14px">
+          </div>
+          <div style="margin-bottom:16px">
+            <label style="display:block;font-size:13px;font-weight:600;margin-bottom:4px;color:#555">Language</label>
+            <select style="width:100%;border:1px solid #ddd;border-radius:6px;padding:10px 14px;font-size:14px;background:#fff">
+              <option>English</option>
+              <option>Español</option>
+              <option>Français</option>
+              <option>Deutsch</option>
+              <option>Русский</option>
+              <option>中文</option>
+            </select>
+          </div>
+          <div style="margin-bottom:16px">
+            <label style="display:block;font-size:13px;font-weight:600;margin-bottom:4px;color:#555">Currency</label>
+            <select style="width:100%;border:1px solid #ddd;border-radius:6px;padding:10px 14px;font-size:14px;background:#fff">
+              <option>USD — US Dollar</option>
+              <option>EUR — Euro</option>
+              <option>GBP — British Pound</option>
+              <option>RUB — Russian Ruble</option>
+              <option>CNY — Chinese Yuan</option>
+            </select>
+          </div>
+          <button class="btn btn--primary">Save Changes</button>
+          <button class="btn btn--outline" style="margin-left:8px">Change Password</button>
+        </div>
+      </div>
+
+      <!-- Messages Tab -->
+      <div id="tabMessages" class="account-tab" style="display:none">
+        <h2>Messages</h2>
+        <div class="order-card">
+          <div class="order-card__header">
+            <div class="order-card__id"><strong>SoundTech Official Store</strong> · 2 hours ago</div>
+            <div style="font-size:12px;color:#e62e04">New</div>
+          </div>
+          <p style="font-size:13px;color:#555">Hi! Your order has been shipped. Tracking number: ST1234567890. You can track it in your orders page.</p>
+        </div>
+        <div class="order-card">
+          <div class="order-card__header">
+            <div class="order-card__id"><strong>AliExpress System</strong> · 1 day ago</div>
+          </div>
+          <p style="font-size:13px;color:#555">Your coupon "$5 off $30" is about to expire. Use it before Feb 28, 2026!</p>
+        </div>
+        <div class="order-card">
+          <div class="order-card__header">
+            <div class="order-card__id"><strong>TechGadget Store</strong> · 3 days ago</div>
+          </div>
+          <p style="font-size:13px;color:#555">Thank you for your purchase! We hope you enjoy your USB-C Hub. Please leave a review if you're satisfied.</p>
+        </div>
+      </div>
+
+      <!-- Disputes Tab -->
+      <div id="tabDisputes" class="account-tab" style="display:none">
+        <h2>Disputes &amp; Returns</h2>
+        <div class="order-card">
+          <div class="order-card__header">
+            <div class="order-card__id">Dispute #D20260108 · Jan 8, 2026</div>
+            <div class="order-card__status" style="color:#00a854">✅ Resolved — Refund issued</div>
+          </div>
+          <p style="font-size:13px;color:#555;margin-top:8px">Item not as described — wrong color received. Full refund of $15.99 processed on Jan 12, 2026.</p>
+        </div>
+        <div style="text-align:center;padding:32px;color:#999;font-size:14px">
+          <p>No open disputes at this time.</p>
+          <button class="btn btn--outline" style="margin-top:12px">Open a Dispute</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__col"><h4>Customer Service</h4><a href="#">Help Center</a><a href="#">Transaction Services</a><a href="#">Account Assistance</a></div>
+      <div class="footer__col"><h4>Shopping With Us</h4><a href="#">Making Payments</a><a href="#">Delivery Options</a><a href="#">Return Policy</a></div>
+      <div class="footer__col"><h4>Collaborate</h4><a href="#">Partnerships</a><a href="#">Affiliate Program</a><a href="#">Seller Portal</a></div>
+      <div class="footer__col"><h4>Pay With</h4><a href="#">Visa / MasterCard</a><a href="#">PayPal</a><a href="#">Apple Pay</a></div>
+      <div class="footer__col"><h4>Stay Connected</h4><a href="#">📘 Facebook</a><a href="#">🐦 Twitter</a><a href="#">📷 Instagram</a></div>
+    </div>
+    <div class="footer__bottom"><p>© 2026 AliExpress.com. All rights reserved.</p></div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+<div class="toast" id="toast"></div>
+
+<script src="js/main.js"></script>
+<script>
+function switchAccountTab(e,tabId){
+  e.preventDefault();
+  document.querySelectorAll('.account-tab').forEach(function(t){t.style.display='none'});
+  document.querySelectorAll('.account-sidebar__nav a').forEach(function(a){a.classList.remove('active')});
+  document.getElementById(tabId).style.display='block';
+  e.target.classList.add('active');
+}
+document.addEventListener('DOMContentLoaded',function(){
+  var g=document.getElementById('wishlistGrid');
+  if(g){var h='';for(var i=0;i<8;i++)h+=buildProductCard(i);g.innerHTML=h;}
+});
+</script>
+</body>
+</html>

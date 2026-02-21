@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Shopping Cart — AliExpress</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/extra.css">
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+  <div class="container">
+    <div><a href="account.html">My Account</a> | <a href="account.html">My Orders</a> | <a href="#">Message Center</a> | <a href="#">Help</a></div>
+    <div><a href="#">🌐 EN / USD</a> | <a href="#">App</a> | <a href="#">Buyer Protection</a></div>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="container">
+    <a href="index.html" class="header__logo">Ali<span>Express</span></a>
+    <div class="header__search">
+      <input type="text" placeholder="Search for products, brands and more...">
+      <button type="button">Search</button>
+    </div>
+    <nav class="header__actions">
+      <a href="account.html">👤 Account</a>
+      <a href="account.html">❤️ Wishlist</a>
+      <a href="cart.html">🛒 Cart <span class="cart-count" id="cartCount">3</span></a>
+    </nav>
+  </div>
+</header>
+
+<!-- BREADCRUMB -->
+<div class="container">
+  <div class="breadcrumb">
+    <a href="index.html">Home</a> <span>›</span>
+    <strong>Shopping Cart</strong>
+  </div>
+</div>
+
+<!-- CART -->
+<div class="container cart-page">
+
+  <div class="cart-table">
+    <div class="cart-table__header">
+      <div></div>
+      <div>Product</div>
+      <div>Price</div>
+      <div>Quantity</div>
+      <div>Total</div>
+      <div></div>
+    </div>
+
+    <div class="cart-item">
+      <div class="cart-item__check"><input type="checkbox" checked></div>
+      <div class="cart-item__product">
+        <div class="cart-item__img">🎧</div>
+        <div>
+          <a href="product.html" class="cart-item__title">Wireless Bluetooth 5.3 Headphones Active Noise Cancelling HiFi Stereo Bass Foldable Gaming Headset</a>
+          <div style="font-size:11px;color:#999;margin-top:4px">Color: Black · Bundle: Headphones Only</div>
+        </div>
+      </div>
+      <div class="cart-item__price">$24.99</div>
+      <div class="cart-item__qty">
+        <button onclick="updateCartQty(this,-1)">−</button>
+        <input type="number" value="1" min="1">
+        <button onclick="updateCartQty(this,1)">+</button>
+      </div>
+      <div class="cart-item__total">$24.99</div>
+      <div class="cart-item__remove" onclick="removeCartItem(this)">✕</div>
+    </div>
+
+    <div class="cart-item">
+      <div class="cart-item__check"><input type="checkbox" checked></div>
+      <div class="cart-item__product">
+        <div class="cart-item__img">⌚</div>
+        <div>
+          <a href="product.html" class="cart-item__title">Smart Watch 2026 Ultra Series 9 Bluetooth Call Heart Rate Blood Oxygen Monitor Waterproof Sports</a>
+          <div style="font-size:11px;color:#999;margin-top:4px">Color: Silver · Size: 45mm</div>
+        </div>
+      </div>
+      <div class="cart-item__price">$18.49</div>
+      <div class="cart-item__qty">
+        <button onclick="updateCartQty(this,-1)">−</button>
+        <input type="number" value="2" min="1">
+        <button onclick="updateCartQty(this,1)">+</button>
+      </div>
+      <div class="cart-item__total">$36.98</div>
+      <div class="cart-item__remove" onclick="removeCartItem(this)">✕</div>
+    </div>
+
+    <div class="cart-item">
+      <div class="cart-item__check"><input type="checkbox" checked></div>
+      <div class="cart-item__product">
+        <div class="cart-item__img">🔌</div>
+        <div>
+          <a href="product.html" class="cart-item__title">USB C Hub Multiport Adapter 7-in-1 USB Type C to HDMI 4K USB 3.0 SD TF Card Reader PD Charging</a>
+          <div style="font-size:11px;color:#999;margin-top:4px">Type: 7-in-1 · Color: Gray</div>
+        </div>
+      </div>
+      <div class="cart-item__price">$12.99</div>
+      <div class="cart-item__qty">
+        <button onclick="updateCartQty(this,-1)">−</button>
+        <input type="number" value="1" min="1">
+        <button onclick="updateCartQty(this,1)">+</button>
+      </div>
+      <div class="cart-item__total">$12.99</div>
+      <div class="cart-item__remove" onclick="removeCartItem(this)">✕</div>
+    </div>
+  </div>
+
+  <!-- Coupon -->
+  <div style="background:#fff;border-radius:8px;padding:16px 20px;margin-top:16px;display:flex;align-items:center;gap:12px">
+    <span style="font-size:13px;font-weight:700;color:#555">🎟️ Have a coupon?</span>
+    <input type="text" placeholder="Enter coupon code" style="border:1px solid #ddd;border-radius:4px;padding:8px 14px;flex:1;font-size:13px">
+    <button class="btn btn--outline" style="padding:8px 20px;font-size:13px">Apply</button>
+  </div>
+
+  <!-- Cart Footer -->
+  <div class="cart-footer">
+    <div class="cart-footer__select-all">
+      <input type="checkbox" checked id="selectAll"> <label for="selectAll">Select All (3)</label>
+      <button style="color:#999;font-size:13px;margin-left:16px;cursor:pointer">Delete Selected</button>
+    </div>
+    <div class="cart-footer__summary">
+      <div class="cart-footer__total">Subtotal (4 items): <strong>$74.96</strong></div>
+      <button class="cart-footer__checkout" onclick="showToast('Proceeding to checkout...','success')">Checkout</button>
+    </div>
+  </div>
+
+  <!-- You May Also Like -->
+  <div style="margin-top:32px">
+    <div class="section-title"><h2>You May Also Like</h2></div>
+    <div class="product-grid" id="cartRecommendGrid"></div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__col"><h4>Customer Service</h4><a href="#">Help Center</a><a href="#">Transaction Services</a><a href="#">Account Assistance</a></div>
+      <div class="footer__col"><h4>Shopping With Us</h4><a href="#">Making Payments</a><a href="#">Delivery Options</a><a href="#">Return Policy</a></div>
+      <div class="footer__col"><h4>Collaborate</h4><a href="#">Partnerships</a><a href="#">Affiliate Program</a><a href="#">Seller Portal</a></div>
+      <div class="footer__col"><h4>Pay With</h4><a href="#">Visa / MasterCard</a><a href="#">PayPal</a><a href="#">Apple Pay</a></div>
+      <div class="footer__col"><h4>Stay Connected</h4><a href="#">📘 Facebook</a><a href="#">🐦 Twitter</a><a href="#">📷 Instagram</a></div>
+    </div>
+    <div class="footer__bottom"><p>© 2026 AliExpress.com. All rights reserved.</p></div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+<div class="toast" id="toast"></div>
+
+<script src="js/main.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+  var g=document.getElementById('cartRecommendGrid');
+  if(g){var h='';for(var i=0;i<10;i++)h+=buildProductCard(i);g.innerHTML=h;}
+});
+function updateCartQty(btn,d){
+  var inp=btn.parentElement.querySelector('input');
+  var v=parseInt(inp.value)||1;v+=d;if(v<1)v=1;inp.value=v;
+  recalcCart();
+}
+function removeCartItem(el){
+  el.closest('.cart-item').remove();
+  recalcCart();
+  showToast('Item removed from cart','success');
+}
+function recalcCart(){
+  var items=document.querySelectorAll('.cart-item');
+  var total=0,count=0;
+  items.forEach(function(item){
+    var price=parseFloat(item.querySelector('.cart-item__price').textContent.replace('$',''));
+    var qty=parseInt(item.querySelector('.cart-item__qty input').value)||1;
+    var sub=price*qty;
+    item.querySelector('.cart-item__total').textContent='$'+sub.toFixed(2);
+    if(item.querySelector('.cart-item__check input').checked){total+=sub;count+=qty;}
+  });
+  var totalEl=document.querySelector('.cart-footer__total');
+  if(totalEl) totalEl.innerHTML='Subtotal ('+count+' items): <strong>$'+total.toFixed(2)+'</strong>';
+  var countEl=document.getElementById('cartCount');
+  if(countEl) countEl.textContent=items.length;
+}
+</script>
+</body>
+</html>
